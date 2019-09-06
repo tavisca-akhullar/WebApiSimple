@@ -1,0 +1,17 @@
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\bin\Debug\netcoreapp2.2\MyApi.Tests.deps.json
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\bin\Debug\netcoreapp2.2\MyApi.Tests.runtimeconfig.json
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\bin\Debug\netcoreapp2.2\MyApi.Tests.runtimeconfig.dev.json
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\bin\Debug\netcoreapp2.2\MyApi.Tests.dll
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\bin\Debug\netcoreapp2.2\MyApi.Tests.pdb
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\bin\Debug\netcoreapp2.2\MyApi.dll
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\bin\Debug\netcoreapp2.2\MyApi.pdb
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\obj\Debug\netcoreapp2.2\MyApi.Tests.csprojAssemblyReference.cache
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\obj\Debug\netcoreapp2.2\MyApi.Tests.csproj.CoreCompileInputs.cache
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\obj\Debug\netcoreapp2.2\MyApi.Tests.AssemblyInfoInputs.cache
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\obj\Debug\netcoreapp2.2\MyApi.Tests.AssemblyInfo.cs
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\obj\Debug\netcoreapp2.2\MyApi.Tests.csproj.CopyComplete
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\obj\Debug\netcoreapp2.2\MyApi.Tests.dll
+C:\Users\akhullar\source\repos\MyApi\MyApi.Tests\obj\Debug\netcoreapp2.2\MyApi.Tests.pdb

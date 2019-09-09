@@ -11,5 +11,9 @@ namespace MyApi.Service
         IEnumerable<Book> GetBook();
         Book GetBookById(int id);
         List<String> AddBook( Book book);
+
+        List<String> UpdateBook(int id,Book book);
+
+        List<String> DeleteBook(int id);
     }
 }

@@ -7,11 +7,7 @@ namespace MyApi.Data
 {
     public class BookData
     {
-        private static List<Book> _bookList;
-        public BookData()
-        {
-            _bookList = new List<Book>();
-        }
+        private static List<Book> _bookList = new List<Book>();
 
         public IEnumerable<Book> GetBooks()
         {
@@ -27,6 +23,33 @@ namespace MyApi.Data
         {
             _bookList.Add(book);
             return true;
+        }
+
+        public bool UpdateBook(int id,Book value)
+        {
+            for(int i=0;i<_bookList.Count;i++)
+            {
+                if (_bookList[i].Id==id)
+                {
+                    _bookList[i] = value;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+        public bool DeleteBook(int id)
+        {
+            for (int i = 0; i < _bookList.Count; i++)
+            {
+                if (_bookList[i].Id == id)
+                {
+                    _bookList.Remove(_bookList[i]);
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

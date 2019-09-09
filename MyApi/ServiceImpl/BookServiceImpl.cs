@@ -1,4 +1,5 @@
 ﻿using MyApi.Data;
+using MyApi.Exceptions;
 using MyApi.Service;
 using MyApi.Utility;
 using System;
@@ -36,6 +37,34 @@ namespace MyApi.ServiceImpl
         public Book GetBookById(int id)
         {
             return _bookData.GetBookByID(id);
+        }
+
+        public List<string> UpdateBook(int id,Book value)
+        {
+            List<String> exceptions = _validator.Validate(value);
+            if (exceptions.Count == 0)
+            {
+               bool status= _bookData.UpdateBook(id,value);
+                if (!status)
+                {
+                    exceptions.Add(new BookNotFoundException().GetType().Name);
+                }
+            }
+            return exceptions;
+        }
+
+        public List<string> DeleteBook(int id)
+        {
+            List<String> exceptions = new List<string>();
+            if (exceptions.Count == 0)
+            {
+                bool status = _bookData.DeleteBook(id);
+                if (!status)
+                {
+                    exceptions.Add(new BookNotFoundException().GetType().Name);
+                }
+            }
+            return exceptions;
         }
     }
 }

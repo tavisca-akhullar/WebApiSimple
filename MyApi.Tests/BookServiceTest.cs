@@ -85,7 +85,6 @@ namespace MyApi.Tests
             }
             List<Book> books = (List<Book>)service.GetBook();
             books[0].Should().BeEquivalentTo(service.GetBookById(1));
-
         }
     }
 }

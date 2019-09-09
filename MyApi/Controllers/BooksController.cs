@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyApi.Data;
 using MyApi.Response;
+using MyApi.Service;
 using MyApi.ServiceImpl;
 using MyApi.Utility;
 
@@ -15,12 +16,12 @@ namespace MyApi.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
-        private BookServiceImpl _bookService;
+        private IBookService _bookService;
         private ResponseStatus response;
         private BookValidator _validator;
-        public BooksController()
+        public BooksController(IBookService bookService)
         {
-            _bookService = new BookServiceImpl();
+            _bookService=bookService;
             response = new ResponseStatus();
             _validator = new BookValidator();
         }
@@ -74,14 +75,14 @@ namespace MyApi.Controllers
             List<String> exceptions = _bookService.AddBook(book);
             if (exceptions.Count > 0)
             {
-                response.Model = book;
+                response.Model = null;
                 response.Status.StatusCode = 400;
                 response.Status.Message = string.Join(",",exceptions.ToArray());
                 return BadRequest(response);
             }
             else
             {
-                response.Model = null;
+                response.Model = book;
                 response.Status.StatusCode = 200;
                 response.Status.Message = "Success..!!";
                 return Ok(response);
@@ -91,15 +92,44 @@ namespace MyApi.Controllers
 
         // PUT: api/Books/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> Put(int id, [FromBody] Book value)
         {
-
+            List<String> exceptions = _bookService.UpdateBook(id,value);
+            if (exceptions.Count > 0)
+            {
+                response.Model = null;
+                response.Status.StatusCode = 400;
+                response.Status.Message = string.Join(",", exceptions.ToArray());
+                return BadRequest(response);
+            }
+            else
+            {
+                response.Model = value;
+                response.Status.StatusCode = 200;
+                response.Status.Message = "Success..!!";
+                return Ok(response);
+            }
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
+            List<String> exceptions = _bookService.DeleteBook(id);
+            if (exceptions.Count > 0)
+            {
+                response.Model = null;
+                response.Status.StatusCode = 400;
+                response.Status.Message = string.Join(",", exceptions.ToArray());
+                return BadRequest(response);
+            }
+            else
+            {
+                response.Model = null;
+                response.Status.StatusCode = 200;
+                response.Status.Message = "Success..!!";
+                return Ok(response);
+            }
         }
     }
 }

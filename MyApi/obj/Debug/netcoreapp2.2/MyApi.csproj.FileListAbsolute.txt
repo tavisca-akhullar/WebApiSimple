@@ -12,3 +12,4 @@ C:\Users\akhullar\source\repos\MyApi\MyApi\obj\Debug\netcoreapp2.2\MyApi.RazorTa
 C:\Users\akhullar\source\repos\MyApi\MyApi\bin\Debug\netcoreapp2.2\MyApi.pdb
 C:\Users\akhullar\source\repos\MyApi\MyApi\obj\Debug\netcoreapp2.2\MyApi.dll
 C:\Users\akhullar\source\repos\MyApi\MyApi\obj\Debug\netcoreapp2.2\MyApi.pdb
+C:\Users\akhullar\source\repos\MyApi\MyApi\bin\Debug\netcoreapp2.2\MyApi.dll.config

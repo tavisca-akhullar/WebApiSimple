@@ -1,0 +1,52 @@
+2019-09-09 18:16:20,231 [1] INFO MyApi.Program - Main Method
+2019-09-09 18:16:50,643 [6] ERROR MyApi.Data.BookData - Getting List
+2019-09-09 18:54:16,227 [1] INFO MyApi.Program - Main Method
+2019-09-09 18:54:31,965 [7] INFO MyApi.Data.BookData - Getting List
+2019-09-09 21:57:36,245 [1] INFO MyApi.Program - Main Method
+2019-09-09 21:58:44,011 [6] INFO MyApi.Data.BookData - Getting List
+2019-09-09 22:10:23,197 [1] INFO MyApi.Program - Main Method
+2019-09-09 22:12:30,184 [1] INFO MyApi.Program - Main Method
+2019-09-09 22:14:49,907 [1] INFO MyApi.Program - Main Method
+2019-09-09 22:16:19,807 [1] INFO MyApi.Program - Main Method
+2019-09-10 09:03:18,780 [1] INFO MyApi.Program - Main Method
+2019-09-10 09:08:59,006 [1] INFO MyApi.Program - Main Method
+2019-09-10 09:44:08,188 [1] INFO MyApi.Program - Main Method
+2019-09-10 09:46:25,606 [1] INFO MyApi.Program - Main Method
+2019-09-10 09:49:38,064 [1] INFO MyApi.Program - Main Method
+2019-09-10 09:58:47,727 [1] INFO MyApi.Program - Main Method
+2019-09-10 10:41:52,184 [1] INFO MyApi.Program - Main Method
+2019-09-10 10:42:29,149 [6] INFO MyApi.Data.BookData - Getting List
+2019-09-10 10:50:24,466 [1] INFO MyApi.Program - Main Method
+2019-09-10 10:57:54,144 [1] INFO MyApi.Program - Main Method
+2019-09-10 12:28:38,032 [1] INFO MyApi.Program - Main Method
+2019-09-10 12:32:44,705 [6] INFO MyApi.Data.BookData - Getting List
+2019-09-10 12:34:38,786 [1] INFO MyApi.Program - Main Method
+2019-09-10 12:34:57,102 [6] INFO MyApi.Data.BookData - Getting List
+2019-09-10 12:36:21,549 [6] INFO MyApi.Data.BookData - Getting List
+2019-09-10 14:42:30,406 [1] INFO MyApi.Program - Main Method
+2019-09-10 14:44:38,527 [6] INFO MyApi.Data.BookData - Getting List
+2019-09-10 14:50:55,323 [1] INFO MyApi.Program - Main Method
+2019-09-10 14:52:29,532 [10] INFO MyApi.Data.BookData - Getting List
+2019-09-10 14:54:08,657 [14] INFO MyApi.Data.BookData - Getting List
+2019-09-10 15:04:04,523 [1] INFO MyApi.Program - Main Method
+2019-09-10 15:04:30,819 [13] INFO MyApi.Data.BookData - Getting List
+2019-09-10 15:04:46,607 [6] INFO MyApi.Data.BookData - Getting List
+2019-09-10 15:14:14,898 [1] INFO MyApi.Program - Main Method
+2019-09-10 15:15:00,444 [6] INFO MyApi.Data.BookData - Getting List
+2019-09-10 15:15:21,019 [6] INFO MyApi.Data.BookData - Getting List
+2019-09-10 15:15:58,860 [6] INFO MyApi.Data.BookData - Getting List
+2019-09-10 15:16:29,927 [6] INFO MyApi.Data.BookData - Getting List
+2019-09-10 15:49:01,147 [1] INFO MyApi.Program - Main Method
+2019-09-10 15:51:31,770 [1] INFO MyApi.Program - Main Method
+2019-09-10 15:54:13,707 [6] INFO MyApi.MiddleWare.LoggingMiddleware - Calling {httpContext.Request.Method} in Url {httpContext.Request.Path}
+2019-09-10 15:54:14,522 [6] INFO MyApi.MiddleWare.LoggingMiddleware - Response Received with status code {httpContext.Response.StatusCode}
+2019-09-10 15:54:24,361 [6] INFO MyApi.MiddleWare.LoggingMiddleware - Calling {httpContext.Request.Method} in Url {httpContext.Request.Path}
+2019-09-10 15:54:24,591 [6] INFO MyApi.MiddleWare.LoggingMiddleware - Response Received with status code {httpContext.Response.StatusCode}
+2019-09-10 15:54:26,974 [6] INFO MyApi.MiddleWare.LoggingMiddleware - Calling {httpContext.Request.Method} in Url {httpContext.Request.Path}
+2019-09-10 15:54:27,041 [6] INFO MyApi.MiddleWare.LoggingMiddleware - Response Received with status code {httpContext.Response.StatusCode}
+2019-09-10 15:55:42,857 [6] INFO MyApi.MiddleWare.LoggingMiddleware - Calling GET in Url /api/values
+2019-09-10 15:55:43,193 [6] INFO MyApi.MiddleWare.LoggingMiddleware - Response Received with status code 200
+2019-09-10 15:55:49,968 [6] INFO MyApi.MiddleWare.LoggingMiddleware - Calling GET in Url /api/Books/
+2019-09-10 15:55:50,049 [6] INFO MyApi.MiddleWare.LoggingMiddleware - Response Received with status code 200
+2019-09-10 15:55:51,011 [9] INFO MyApi.MiddleWare.LoggingMiddleware - Calling GET in Url /api/Books/
+2019-09-10 15:55:51,035 [9] INFO MyApi.MiddleWare.LoggingMiddleware - Response Received with status code 200

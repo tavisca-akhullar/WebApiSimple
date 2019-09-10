@@ -7,7 +7,14 @@ namespace MyApi.Response
 {
     public class ResponseStatus
     {
-        public ResponseStatus()
+        private static ResponseStatus Response = null;
+        public static ResponseStatus GetResponse()
+        {
+            if (Response == null)
+                Response = new ResponseStatus();
+            return Response;
+        }
+        private ResponseStatus()
         {
             Status = new Status();
         }

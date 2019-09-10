@@ -60,10 +60,50 @@ namespace MyApi.Tests
         }
 
         [Fact]
-        public void Book_Doesnot_Get_Added_When_Invalid_Credentials_Is_Added()
+        public void Book_Doesnot_Get_Added_When_Invalid_BookName_Is_Added()
         {
             IBookService service = new BookServiceImpl();
-            Book book = new Book(1, "As You Like It Part-2", "William12 Shakespeare", "Suspense", 1000);
+            Book book = new Book(1, "As You Like It Part-2", "William Shakespeare", "Suspense", 1000);
+            service.AddBook(book);
+            List<Book> books = (List<Book>)service.GetBook();
+            Assert.Equal(0, books.Count);
+        }
+
+        [Fact]
+        public void Book_Doesnot_Get_Added_When_Invalid_AuthorName_Is_Added()
+        {
+            IBookService service = new BookServiceImpl();
+            Book book = new Book(1, "As You Like It Part", "William Shakespeareq12", "Suspense", 1000);
+            service.AddBook(book);
+            List<Book> books = (List<Book>)service.GetBook();
+            Assert.Equal(0, books.Count);
+        }
+
+        [Fact]
+        public void Book_Doesnot_Get_Added_When_Invalid_Category_Is_Added()
+        {
+            IBookService service = new BookServiceImpl();
+            Book book = new Book(1, "As You Like It Part-2", "William Shakespeare", "Suspense431224", 1000);
+            service.AddBook(book);
+            List<Book> books = (List<Book>)service.GetBook();
+            Assert.Equal(0, books.Count);
+        }
+
+        [Fact]
+        public void Book_Doesnot_Get_Added_When_Negative_BookId_Is_Added()
+        {
+            IBookService service = new BookServiceImpl();
+            Book book = new Book(-1, "As You Like It Part", "William Shakespeare", "Suspense", 1000);
+            service.AddBook(book);
+            List<Book> books = (List<Book>)service.GetBook();
+            Assert.Equal(0, books.Count);
+        }
+
+        [Fact]
+        public void Book_Doesnot_Get_Added_When_Negative_Price_Is_Added()
+        {
+            IBookService service = new BookServiceImpl();
+            Book book = new Book(1, "As You Like It Part-2", "William Shakespeare", "Suspense", -1000);
             service.AddBook(book);
             List<Book> books = (List<Book>)service.GetBook();
             Assert.Equal(0, books.Count);
@@ -85,6 +125,42 @@ namespace MyApi.Tests
             }
             List<Book> books = (List<Book>)service.GetBook();
             books[0].Should().BeEquivalentTo(service.GetBookById(1));
+        }
+
+        [Fact]
+        public void Get_Book_When_Incorrect_Id_Is_Passed()
+        {
+            IBookService service = new BookServiceImpl();
+            List<Book> bookList = new List<Book>
+                {
+                new Book(1,"As You Like It","William Shakespeare","Suspense",1000)
+                ,new Book(2,"Half Girlfirend","Chetan Bhagat","Romance",500)
+                ,new Book(3,"Veronica Decides To Die","Paul Caulho","Thriller",800)
+                };
+            foreach (var book in bookList)
+            {
+                service.AddBook(book);
+            }
+            service.GetBookById(4).Should().BeNull();
+        }
+
+        [Fact]
+        public void Update_book()
+        {
+            IBookService service = new BookServiceImpl();
+            List<Book> bookList = new List<Book>
+                {
+                new Book(1,"As You Like It","William Shakespeare","Suspense",1000)
+                ,new Book(2,"Half Girlfirend","Chetan Bhagat","Romance",500)
+                ,new Book(3,"Veronica Decides To Die","Paul Caulho","Thriller",800)
+                };
+            foreach (var book in bookList)
+            {
+                service.AddBook(book);
+            }
+            Book tempBook = new Book(1, "Veronica decides to die", "Paul Caulho", "Suspense", 1000);
+            service.UpdateBook(1, tempBook);
+            tempBook.Should().BeEquivalentTo(service.GetBookById(1));
         }
     }
 }

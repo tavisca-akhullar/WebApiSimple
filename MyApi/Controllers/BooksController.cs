@@ -22,7 +22,7 @@ namespace MyApi.Controllers
         public BooksController(IBookService bookService)
         {
             _bookService=bookService;
-            response = new ResponseStatus();
+            response = ResponseStatus.GetResponse();
             _validator = new BookValidator();
         }
         // GET: api/Books

@@ -9,7 +9,9 @@ namespace MyApi.Exceptions
     {
         public BookNotFoundException():base("Book Not Found")
         {
-                
+            
+            
+            
         }
     }
 }
